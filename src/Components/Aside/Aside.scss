@@ -1,0 +1,30 @@
+.aside {
+  grid-area: aside;
+  padding: 1.5rem;
+  &__content {
+    position: sticky;
+    top: 2rem;
+    @media screen and (max-width: 768px) {
+      position: sticky;
+      top: 50px;
+    }
+  }
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  &__list {
+  }
+  &__link {
+    @extend %title;
+  }
+}
+.active {
+  color: $primary;
+}

@@ -1,0 +1,20 @@
+.footer {
+  grid-area: footer;
+  background-color: $footer;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  &__title {
+    color: $white;
+    font-weight: 800;
+    font-size: 3.4rem;
+    font-family: "Roboto Slab";
+    text-transform: uppercase;
+  }
+  &__sutitle {
+    color: $white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    font-family: "Roboto";
+  }
+}

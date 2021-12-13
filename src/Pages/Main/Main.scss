@@ -1,0 +1,36 @@
+.main {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: minmax(24rem, auto) 1fr;
+  grid-template-rows: 1fr;
+  gap: 0 1.5rem;
+  padding: 0 1.5rem;
+  grid-template-areas: "aside section";
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "aside"
+      "section";
+    gap: 0 0;
+  }
+}
+.content {
+  grid-area: section;
+  &__title {
+    @extend %title;
+    padding: 1.5rem;
+    font-weight: 700;
+    background-color: $primary;
+    color: $white;
+    margin: 0 0 2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  &__cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  }
+}

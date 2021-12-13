@@ -1,0 +1,19 @@
+.error {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  &__title {
+    font-size: 9.2rem;
+    font-family: "Roboto Slab", serif;
+    color: $primary;
+    margin: 2rem 0 2rem 0;
+    font-weight: 800;
+  }
+  &__subtitle {
+    @extend %title;
+  }
+}
